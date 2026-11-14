@@ -1,0 +1,67 @@
+name: Bug report
+description: Something in Blockwise NC is wrong, broken or misleading
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is public. Only paste program text you are free to share; a few lines that reproduce the problem are enough.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: program
+    attributes:
+      label: Program that shows it
+      description: The shortest NC program (or the lines around the problem) that reproduces it.
+      render: text
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Editor (colouring, typing, navigation, bookmarks)
+        - Backplot
+        - Cycle time / Line Times
+        - Machines and machine settings
+        - NC Functions (renumber, rotate, mirror, ...)
+        - File compare
+        - Statistics / Tool List
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: file-type
+    attributes:
+      label: NC file type
+      description: The file type shown in the status bar, and the machine if one is chosen.
+      placeholder: e.g. ISO Milling, machine "Generic 3-axis mill"
+  - type: input
+    id: version
+    attributes:
+      label: Blockwise NC version
+      description: Shown in the Extensions view.
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: host
+    attributes:
+      label: Where it runs
+      options:
+        - Desktop VS Code (Windows)
+        - Desktop VS Code (macOS)
+        - Desktop VS Code (Linux)
+        - vscode.dev / VS Code for the web
+        - Another editor (say which below)
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, the VS Code version, lines from the "Blockwise NC" output channel.

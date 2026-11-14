@@ -1,0 +1,29 @@
+name: Feature request
+description: Something Blockwise NC should do, or do better
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: The job on the shop floor or at the desk that this would help with.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+      description: How you picture it working. If another editor does this well, say which and how.
+    validations:
+      required: true
+  - type: input
+    id: file-type
+    attributes:
+      label: Control / NC file type
+      description: If it depends on a control or machine type.
+      placeholder: e.g. Fanuc, Heidenhain, Siemens, 5-axis table-table
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Sample program lines (only what you are free to share), screenshots, links.
